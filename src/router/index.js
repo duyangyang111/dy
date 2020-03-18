@@ -1,14 +1,45 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-
+import Index  from '../components/index.vue'
+import Login  from '../components/login/login.vue'
+import Register from '../components/login/register.vue'
+import Xieyi from '../components/login/xieyi.vue'
+import Me  from '../components/me.vue'
+import Forget from  '../components/login/forget.vue'
+import Details from '../components/details.vue'
+import Search  from  '../components/search.vue'
+import Pdetails from  '../components/pdetails.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: Home
+  {path:'/pdetails/:id',
+  component:Pdetails,
+  props:true
+},
+  {path:'/search',
+   component:Search
+},
+  {path:'/details/:pid',
+   component:Details,
+   props:true
+},
+  {path:'/forget',
+   component:Forget
+},
+  {path:'/me',
+   component:Me
+},
+  {path:'/xieyi',
+   component:Xieyi
+},
+  {path:'/register',
+   component:Register
+},
+  {path:'/login',
+   component:Login
+},
+  {path:'/',
+   component:Index
   },
   {
     path: '/about',
